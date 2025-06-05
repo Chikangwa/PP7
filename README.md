@@ -90,6 +90,17 @@ In this exercise you will:
 
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
 6. **Explain** in comments or a short README how each stage transforms the code.
+-Präprozessierung 
+Erweitert Makros und Includes. Ergebnis: sample.i.
+
+-Kompilierung
+Übersetzt den präprozessierten Code in Assembler. Ergebnis: sample.s.
+
+-Assemblierung 
+konvertierst Assembler in Maschinencode. Ergebnis: sample.o.
+
+-Linken
+Verbindet Objektdatei mit Bibliotheken, um eine ausführbare Datei zu erstellen. Ergebnis: sample.
 
 ---
 
