@@ -131,6 +131,15 @@ In this exercise you will:
    vim -c ":%s/printf/debug_printf/g" -c ":wq" solutions/debug_sample.c
    ```
 7. **Explain** each tool’s approach to regex-based search and replace, and when you might prefer one over the others.
+   - grep ist Schnell, einfach, zeigt Treffer mit Zeilennummern.
+   - sed ist Ideal für Skripte, schnelles In-Place-Editieren.
+   - awk gibt flexibler Output, kombiniert Filter und Ausgabe.
+   - vim ist mächtig für gezielte manuelle Eingriffe
+Für schnelle, automatisierte Bearbeitungen: sed ist erste Wahl.
+
+Für Analyse & strukturierte Ausgabe: awk ist flexibler als grep.
+
+Für gezieltes Refactoring: vim (interaktiv oder über CLI) bietet volle Kontrolle.
 
 ---
 
@@ -174,8 +183,16 @@ In this exercise you will:
 6. **Document** the workflow in comments or a short file, emphasizing:
 
    * The role of `extern` declarations.
+   - `extern` sagt dem Compiler: „Diese Funktion existiert, aber sie ist woanders definiert“.
+   - Ermöglicht die Trennung von Funktionsdeklaration und Definition in verschiedenen Dateien.
+
    * Why separating compilation can speed up builds.
+   - Schnellere Builds: Nur geänderte Dateien werden neu kompiliert.
+   - Fördert modularen, wartbaren Code.
+   - Ideal für größere Projekte mit vielen Quellcodedateien.
+
    * How manual linking differs from letting `gcc` handle all steps in one command.
+     Maual linking hat Volle Kontrolle über Kompilierung und Verlinkung.
 
 ---
 
